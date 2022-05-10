@@ -14,6 +14,12 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
+import IconButton from '@mui/material/IconButton';
+import Stack from '@mui/material/Stack';
+import DeleteIcon from '@mui/icons-material/Delete';
+import AlarmIcon from '@mui/icons-material/Alarm';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import Avatar from '@mui/material/Avatar';
 
 function Copyright(props) {
   return (
@@ -85,7 +91,7 @@ function PricingContent() {
               href="#"
               sx={{ my: 1, mx: 1.5 }}
             >
-              Enterprise
+              New Arrived
             </Link>
             <Link
               variant="button"
@@ -93,12 +99,16 @@ function PricingContent() {
               href="#"
               sx={{ my: 1, mx: 1.5 }}
             >
-              Support
+              Kids Zone
             </Link>
           </nav>
           <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
           </Button>
+          <IconButton color="primary" aria-label="add to shopping cart">
+  <AddShoppingCartIcon />
+</IconButton>
+<Avatar alt="Cindy Baker" src="https://i.pinimg.com/564x/d1/dc/97/d1dc979c4664242c74b144a9b115de9c.jpg" />
         </Toolbar>
       </AppBar>
       {/* Hero unit */}

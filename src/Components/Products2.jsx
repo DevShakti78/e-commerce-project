@@ -7,18 +7,18 @@ import Typography from '@mui/material/Typography';
 const images = [
   {
     url: 'https://i.pinimg.com/originals/ea/5a/12/ea5a12ff96e13dbfeb1e526e33e17433.jpg',
-    title: 'Breakfast',
-    width: '40%',
+    title: 'Mens Wear',
+    width: '33.33%',
   },
   {
-    url: '/static/images/buttons/burgers.jpg',
-    title: 'Burgers',
-    width: '30%',
+    url: 'https://www.pinkvilla.com/imageresize/unknown-125.jpeg?width=752&format=webp&t=pvorg',
+    title: 'Womens Wear',
+    width: '33.33%',
   },
   {
-    url: '/static/images/buttons/camera.jpg',
-    title: 'Camera',
-    width: '30%',
+    url: 'https://www.trendzgarments.in/wp-content/uploads/2017/08/kids-ware.jpeg',
+    title: 'Kids Zone',
+    width: '33.33%',
   },
 ];
 
@@ -88,6 +88,8 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function ButtonBases() {
   return (
+      <>
+      <h1>Featured Products</h1>
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
         <ImageButton
@@ -118,5 +120,6 @@ export default function ButtonBases() {
         </ImageButton>
       ))}
     </Box>
+    </>
   );
 }

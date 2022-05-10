@@ -9,8 +9,9 @@ function App() {
     <div>
 <Pricing/>
 <Album/>
-<Footer/>
 <ButtonBases/>
+<Footer/>
+
     </div>
   );
 }
