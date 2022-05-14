@@ -80,7 +80,7 @@ function PricingContent() {
             <Link
               variant="button"
               color="text.primary"
-              href="#"
+              href="http://localhost:3000/product"
               sx={{ my: 1, mx: 1.5 }}
             >
               Features
@@ -88,7 +88,7 @@ function PricingContent() {
             <Link
               variant="button"
               color="text.primary"
-              href="#"
+              href="http://localhost:3000/product"
               sx={{ my: 1, mx: 1.5 }}
             >
               New Arrived
@@ -105,9 +105,14 @@ function PricingContent() {
           <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
           </Button>
-          <IconButton color="primary" aria-label="add to shopping cart">
+          <Link
+              href="http://localhost:3000/cart"
+            >
+              <IconButton color="primary" aria-label="add to shopping cart">
   <AddShoppingCartIcon />
 </IconButton>
+            </Link>
+         
 <Avatar alt="Cindy Baker" src="https://i.pinimg.com/564x/d1/dc/97/d1dc979c4664242c74b144a9b115de9c.jpg" />
         </Toolbar>
       </AppBar>
