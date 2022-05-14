@@ -11,6 +11,10 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Cartitems from './Components/Cartitems';
 import Cart from './Components/Cart'
 import {CartProvider} from 'react-use-cart'
+import AddressForm from './Components/Address'
+import PaymentForm from './Components/Paymentform'
+
+
 function App() {
   return (
     <div>
@@ -27,9 +31,12 @@ function App() {
         
           <Route path="product" element={<Cartitems/>} />
           <Route path="cart" element={<Cart/>} />
+          <Route path="address" element={<AddressForm/>} />
+          <Route path="payment" element={<PaymentForm/>} />
        
       </Routes>
     </BrowserRouter>
+   
     <Footer/>
     </CartProvider>
    

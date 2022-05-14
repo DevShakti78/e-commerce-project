@@ -11,7 +11,7 @@ const Cartitems = () => {
     <>
 <h1 className='text-center mt-3'>All items</h1>
 <div className='justify-content-center'>
-<FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+<FormControl sx={{ m: 1, minWidth: 180 }} size="small">
       <InputLabel id="demo-select-small">Sort by price</InputLabel>
       <Select
         labelId="demo-select-small"
