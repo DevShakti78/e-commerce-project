@@ -9,7 +9,6 @@ import Select from '@mui/material/Select';
 const Cartitems = () => {
   return (
     <>
-<h1 className='text-center mt-3'>All items</h1>
 <div className='justify-content-center'>
 <FormControl sx={{ m: 1, minWidth: 180 }} size="small">
       <InputLabel id="demo-select-small">Sort by price</InputLabel>

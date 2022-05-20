@@ -13,26 +13,31 @@ import Cart from './Components/Cart'
 import {CartProvider} from 'react-use-cart'
 import AddressForm from './Components/Address'
 import PaymentForm from './Components/Paymentform'
-
-
+import AutoplayExample from './Components/Homeslideshow'
+import {SignInSide} from './sign-in/Login'
+import Mainhome from './Components/Mainhome';
+import {SignUpSide} from './sign-up/SignUp'
 function App() {
   return (
     <div>
+      <Pricing/>
       <CartProvider>
      
      
     
-<Pricing/>
 
-
+{/* <AutoplayExample/>
+<ButtonBases/> */}
 
 <BrowserRouter>
       <Routes>
-        
-          <Route path="product" element={<Cartitems/>} />
-          <Route path="cart" element={<Cart/>} />
-          <Route path="address" element={<AddressForm/>} />
-          <Route path="payment" element={<PaymentForm/>} />
+      <Route path="/" element={<Mainhome/>} />
+          <Route path="/product" element={<Cartitems/>} />
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="/address" element={<AddressForm/>} />
+          <Route path="/payment" element={<PaymentForm/>} />
+          <Route path="/login" element={<SignInSide/>} />
+          <Route path="/signup" element={<SignUpSide/>} />
        
       </Routes>
     </BrowserRouter>

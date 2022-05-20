@@ -20,11 +20,14 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import AlarmIcon from '@mui/icons-material/Alarm';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Avatar from '@mui/material/Avatar';
-
+import Badge from '@mui/material/Badge';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import {useState} from 'react'
+import AutoplayExample from './Homeslideshow'
+import {useNavigate} from 'react-router-dom'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -107,9 +110,14 @@ const footers = [
   },
 ];
 
+
 function PricingContent() {
+ 
+  
+  const [itemCount, setItemCount] = React.useState(1);
   return (
     <React.Fragment>
+     
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
       <CssBaseline />
       <AppBar
@@ -158,14 +166,17 @@ function PricingContent() {
               Kids Zone
             </Link>
           </nav>
-          <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+          <Button onClick={()=>console.log("here")} href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
           </Button>
           <Link
               href="http://localhost:3000/cart"
             >
               <IconButton color="primary" aria-label="add to shopping cart">
-  <AddShoppingCartIcon />
+              <Badge color="secondary" badgeContent={itemCount}>
+              <AddShoppingCartIcon />{" "}
+        </Badge>
+  
 </IconButton>
             </Link>
          
@@ -179,10 +190,10 @@ function PricingContent() {
       {/* Footer */}
      
       {/* End footer */}
+     
     </React.Fragment>
+    
   );
 }
 
-export default function Pricing() {
-  return <PricingContent />;
-}
+export default PricingContent

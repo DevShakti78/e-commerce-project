@@ -1,6 +1,8 @@
 import React from 'react'
 import { useCart } from 'react-use-cart'
+import {useNavigate} from 'react-router-dom'
 const Cart = () => {
+    const Navigate = useNavigate()
     const {
         isEmpty,
         totalUniqueItems,
@@ -12,6 +14,7 @@ const Cart = () => {
         removeItem,
         emptyCart,
     } = useCart();
+    console.log(items)
     if(isEmpty) return <h1 className='text-center'>Add something To Start Shopping....</h1>
   return (
       <section className='py-4 container'>
@@ -45,7 +48,7 @@ const Cart = () => {
 </div>
 <div className='col-auto '>
 <button className='btn btn-danger m-2' onClick={()=>emptyCart()}>Empty Cart</button>
-<button className='btn btn-primary'>Buy Now</button>
+<button onClick={()=>Navigate("/address")} className='btn btn-primary'>Buy Now</button>
 </div>
 </div>
       </section>

@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
+import { useCart } from 'react-use-cart'
 
 function Copyright() {
   return (
@@ -30,7 +31,8 @@ function Copyright() {
 }
 
 const steps = ['Shipping address', 'Payment details', 'Review your order'];
-
+const {items} = useCart()
+console.log(items)
 function getStepContent(step) {
   switch (step) {
     case 0:

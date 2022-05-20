@@ -89,7 +89,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
 export default function ButtonBases() {
   return (
       <>
-      <h1>Featured Products</h1>
+      <br />
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
         <ImageButton
