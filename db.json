@@ -47,7 +47,15 @@
       "desc": "Besides sea",
       "price": 199
 
-  }
+  },
+  {
+    "id": 7,
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11487304/2020/7/14/a27a99f8-c573-47b4-b00a-6af20319b8c91594704274509-Nautica-Men-Tshirts-8571594704272476-1.jpg",
+    "title": "Tshirt Fablors",
+    "desc": "Besides sea",
+    "price": 199
+
+}
   ]
   
 }

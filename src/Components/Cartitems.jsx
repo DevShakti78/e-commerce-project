@@ -12,22 +12,7 @@ const Cartitems = () => {
   return (
     <>
 <div className='justify-content-center'>
-<FormControl sx={{ m: 1, minWidth: 180 }} size="small">
-      <InputLabel id="demo-select-small">Sort by price</InputLabel>
-      <Select
-        labelId="demo-select-small"
-        id="demo-select-small"
-        label="Sort by price"
-       
-      >
-        <MenuItem value="">
-          <em>None</em>
-        </MenuItem>
-        <MenuItem value={10}>Low To High</MenuItem>
-        <MenuItem value={20}>High To Low</MenuItem>
-        <MenuItem value={30}>All item</MenuItem>
-      </Select>
-    </FormControl>
+
 </div>
 <section className='py-4 container'>
 <div className='row justify-content-center'>
