@@ -18,9 +18,11 @@ import {SignInSide} from './sign-in/Login'
 import Mainhome from './Components/Mainhome';
 import {SignUpSide} from './sign-up/SignUp'
 import Siderbar from './Components/Siderbar';
+import TestProd from './Components/TestProd';
 function App() {
   return (
     <>
+    <TestProd/>
        <Pricing/>
     <div className='flexprop'>
     <div className='box1'>

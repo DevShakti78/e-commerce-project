@@ -5,8 +5,10 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { useSelector } from 'react-redux';
 
 const Cartitems = () => {
+  const item = useSelector((e)=>(e.product))
   return (
     <>
 <div className='justify-content-center'>
@@ -29,7 +31,8 @@ const Cartitems = () => {
 </div>
 <section className='py-4 container'>
 <div className='row justify-content-center'>
-{data.productData.map((item,index)=>{
+{
+item.map((item,index)=>{
 return(
 <Itemcard img={item.img} title={item.title} desc={item.desc} price={item.price} item={item} key={index} />
 )
