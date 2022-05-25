@@ -17,12 +17,20 @@ import AutoplayExample from './Components/Homeslideshow'
 import {SignInSide} from './sign-in/Login'
 import Mainhome from './Components/Mainhome';
 import {SignUpSide} from './sign-up/SignUp'
+import Siderbar from './Components/Siderbar';
 function App() {
   return (
-    <div>
-      <Pricing/>
-      <CartProvider>
+    <>
+       <Pricing/>
+    <div className='flexprop'>
+    <div className='box1'>
+      <Siderbar/>
      
+    </div>
+    <div className='box2'>
+ 
+      <CartProvider>
+
      
     
 
@@ -42,10 +50,14 @@ function App() {
       </Routes>
     </BrowserRouter>
    
-    <Footer/>
+ 
     </CartProvider>
    
     </div>
+    </div>
+    <Footer/>
+    </>
+    
   );
 }
 
