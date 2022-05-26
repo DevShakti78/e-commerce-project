@@ -68,7 +68,7 @@ export default function PaymentForm() {
         </Grid>
       </Grid>
       <Button href='https://e-commerce-project-iota.vercel.app' variant="contained" endIcon={<SendIcon />}>
-        Next
+        {alert("payment succes")}
       </Button>
     </React.Fragment>
     </div>
