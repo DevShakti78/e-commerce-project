@@ -8,7 +8,7 @@ const Siderbar = () => {
   const dispatch = useDispatch();
   const handleSorted = (order) => {
     axios
-      .get(`http://localhost:8080/productData?_sort=price&_order=${order}`)
+      .get(`https://fashionltd.herokuapp.com/productData?_sort=price&_order=${order}`)
       .then(({ data }) => {
         dispatch(ProdData(data));
         console.log(data)
@@ -16,7 +16,7 @@ const Siderbar = () => {
   };
   const handleSortedfilter = (order) => {
     axios
-      .get(`http://localhost:8080/productData?catog=${order}`)
+      .get(`https://fashionltd.herokuapp.com/productData?catog=${order}`)
       .then(({ data }) => {
         dispatch(ProdData(data));
         console.log(data)
@@ -24,7 +24,7 @@ const Siderbar = () => {
   };
   const handleColorfilter = (order) => {
     axios
-      .get(`http://localhost:8080/productData?color=${order}`)
+      .get(`https://fashionltd.herokuapp.com/productData?color=${order}`)
       .then(({ data }) => {
         dispatch(ProdData(data));
         console.log(data)

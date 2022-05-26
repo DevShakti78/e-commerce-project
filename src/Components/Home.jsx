@@ -144,7 +144,7 @@ function PricingContent() {
             <Link
               variant="button"
               color="text.primary"
-              href="http://localhost:3000/product"
+              href="https://e-commerce-project-iota.vercel.app/product"
               sx={{ my: 1, mx: 1.5 }}
             >
               Features
@@ -152,7 +152,7 @@ function PricingContent() {
             <Link
               variant="button"
               color="text.primary"
-              href="http://localhost:3000/product"
+              href="https://e-commerce-project-iota.vercel.app/product"
               sx={{ my: 1, mx: 1.5 }}
             >
               New Arrived
@@ -170,7 +170,7 @@ function PricingContent() {
             Login
           </Button>
           <Link
-              href="http://localhost:3000/cart"
+              href="https://e-commerce-project-iota.vercel.app/cart"
             >
               <IconButton color="primary" aria-label="add to shopping cart">
               <Badge color="secondary" badgeContent={itemCount}>
