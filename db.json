@@ -5,7 +5,9 @@
       "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11948298/2022/3/24/ba4a8e4a-8e7b-4bfe-9ea2-fd5693598f931648115076887-Roadster-Men-Grey-Melange-T-shirt-8701648115076447-1.jpg",
       "title": "Tshirt Roadster",
       "desc": "Pure cotton",
-      "price": 599
+      "price": 599,
+      "catog":"men",
+      "color":"white"
 
   },
   {
@@ -13,7 +15,9 @@
       "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/7546900/2019/1/24/c9be0d6e-30a4-4242-b4e0-1c166b73f2781548320874402-HERENOW-Men-Polo-Collar-T-shirt-4861548320873235-1.jpg",
       "title": "Puma One",
       "desc": "Pure cotton with poly",
-      "price": 499
+      "price": 499,
+      "catog":"men",
+      "color":"blue"
 
   },
   {
@@ -21,7 +25,9 @@
       "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700871/2020/1/22/f932ae44-0fb8-4b92-b7bc-f1756253294b1579692118186-HRX-by-Hrithik-Roshan-Men-Teal-Blue-Printed-T-shirt-90515796-1.jpg",
       "title": "Reebook Blend",
       "desc": "nice one to comfort",
-      "price": 589
+      "price": 589,
+      "catog":"men",
+      "color":"blue"
 
   },
   {
@@ -29,7 +35,9 @@
       "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17395060/2022/4/1/0b0397df-5568-4881-a4b1-8a27e1ac4cc01648814581172-one8-x-PUMA-Men-Tshirts-5551648814580765-1.jpg",
       "title": "Tshirt Raymond",
       "desc": "good for sunburn",
-      "price": 1099
+      "price": 1099,
+      "catog":"men",
+      "color":"blue"
 
   },
   {
@@ -37,7 +45,9 @@
       "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13343914/2021/3/31/ee8be01b-833b-4c3d-b855-9a0b462a8b8e1617186571707-Mast--Harbour-Men-Blue-Solid-Round-Neck-T-shirt-719161718657-1.jpg",
       "title": "Polywind shirt",
       "desc": "Collection of wind",
-      "price": 299
+      "price": 299,
+      "catog":"men",
+      "color":"white"
 
   },
   {
@@ -45,15 +55,129 @@
       "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11487304/2020/7/14/a27a99f8-c573-47b4-b00a-6af20319b8c91594704274509-Nautica-Men-Tshirts-8571594704272476-1.jpg",
       "title": "Tshirt Fablors",
       "desc": "Besides sea",
-      "price": 199
+      "price": 199,
+      "catog":"men",
+      "color":"blue"
 
   },
   {
     "id": 7,
-    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11487304/2020/7/14/a27a99f8-c573-47b4-b00a-6af20319b8c91594704274509-Nautica-Men-Tshirts-8571594704272476-1.jpg",
-    "title": "Tshirt Fablors",
-    "desc": "Besides sea",
-    "price": 199
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10356859/2019/8/8/b783aef9-c902-462e-af73-de159bfd011c1565256752191-Libas-Women-Kurta-Sets-2081565256750830-1.jpg",
+    "title": "Women Kurti",
+    "desc": "Norway dressing style",
+    "price": 999,
+    "catog":"women",
+    "color":"pink"
+
+},
+{
+  "id": 8,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/9/16/e698b1e1-07d3-446d-987f-bc8a75db18f91600207614701-2.jpg",
+  "title": "Designer Frock",
+  "desc": "Eastern wear",
+  "price": 1999,
+  "catog":"women",
+  "color":"red"
+
+},
+{
+  "id": 9,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13764318/2021/4/7/c6a16eb7-833d-4df2-8e0e-cb694a8a83e51617792817180-Varanga-Peach-Bandhani-Printed-Embroidered-Kurta-69516177928-1.jpg",
+  "title": "Vargana Women Mouve",
+  "desc": "Comfortable wear",
+  "price": 1599,
+  "catog":"women",
+  "color":"red"
+
+},
+{
+  "id": 10,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17241820/2022/2/22/6826eb82-a889-4550-9729-7c638a6d82241645516346563KALINIWomenWhiteDyedFlaredSleevesQuirkyAnarkaliKurta1.jpg",
+  "title": "Anarkali Kurta",
+  "desc": "Middle western style",
+  "price": 299,
+  "catog":"women",
+  "color":"white"
+
+},
+{
+  "id": 11,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17481680/2022/3/11/605468c3-dcb2-4f4f-b595-68dd3e8c4f731646979077807SochWomenGreenStripedFlaredSleevesMirrorWorkAnarkaliKurta1.jpg",
+  "title": "Best Women Kurti",
+  "desc": "Norway east dressing style",
+  "price": 1299,
+  "catog":"women",
+  "color":"white"
+
+},
+{
+  "id": 12,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14951330/2022/2/16/ccc5bd1a-5515-41b9-b1c5-14069b4958d91645010770483-Ahalyaa-Women-Beige-Floral-Printed-Regular-Gotta-Patti-Kurta-2.jpg",
+  "title": "Ahlaya Kurti Set",
+  "desc": "A western culture dress",
+  "price": 4999,
+  "catog":"women",
+  "color":"white"
+
+},
+{
+  "id": 13,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17883396/2022/4/14/5468cf75-f0fc-4589-ad1b-cb6bb397d4d21649905638063CottonT-shirtdress1.jpg",
+  "title": "cotton tshirt",
+  "desc": "A cotton means comfort",
+  "price": 489,
+  "catog":"kids",
+  "color":"white"
+
+},
+{
+  "id": 14,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/18037712/2022/4/26/30be8e31-db9c-4373-8ac6-1af350edb4531650961173407OversizedT-shirt1.jpg",
+  "title": "pure cotton tshirt",
+  "desc": "comfortable wear",
+  "price": 589,
+  "catog":"kids",
+  "color":"blue"
+
+},
+{
+  "id": 15,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17810490/2022/4/8/e6e08133-7e6d-41a6-9cf4-1811cb65d9101649394344338OversizedT-shirt1.jpg",
+  "title": "White tshirt",
+  "desc": "A cotton means comfort",
+  "price": 2489,
+  "catog":"kids",
+  "color":"white"
+
+},
+{
+  "id": 16,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17842496/2022/4/11/93d25581-28eb-4ffb-b28e-248455cabec81649650407932Patternedjerseydress1.jpg",
+  "title": "Frock",
+  "desc": "A cotton means comfort",
+  "price": 489,
+  "catog":"kids",
+  "color":"blue"
+
+},
+{
+  "id": 17,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/18254904/2022/5/15/34d61dff-9057-4345-bb23-ee85a3879c621652571725490PrintedT-shirt1.jpg",
+  "title": "Blue Printed tshirt",
+  "desc": "A cotton means comfort",
+  "price": 2489,
+  "catog":"kids",
+  "color":"white"
+
+},
+{
+  "id": 18,
+  "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17810286/2022/4/8/1ad9300f-786d-44b4-baad-67010cfd74071649401086115Jerseyshorts1.jpg",
+  "title": "blue play tshirt",
+  "desc": "A cotton means comfort",
+  "price": 599,
+  "catog":"kids",
+  "color":"blue"
 
 }
   ]
