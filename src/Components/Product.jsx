@@ -78,7 +78,6 @@ export default function Album() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" variant="contained" color="success">View</Button>
                     <Button size="small" variant="outlined" color="error">Add to cart</Button>
                   </CardActions>
                 </Card>
