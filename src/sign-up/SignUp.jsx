@@ -80,7 +80,7 @@ export function SignUpSide() {
   return (
     <div className="devcont">
       <ThemeProvider theme={theme}>
-        <Grid container component="main" sx={{ height: "40vh" }}>
+        <Grid container component="main" sx={{ height: "100vh" }}>
           <CssBaseline />
           <Grid
             item
@@ -89,7 +89,7 @@ export function SignUpSide() {
             md={7}
             sx={{
               backgroundImage:
-                "url(https://www.ulcdn.net/media/subscription_popup/Colour-Crush-Sale-End-Pop-up.jpg?1648194184)",
+                "url(https://www.pixelstalk.net/wp-content/uploads/2016/06/Fashion-Wallpaper-HD-Download.jpg)",
               backgroundRepeat: "no-repeat",
               backgroundColor: (t) =>
                 t.palette.mode === "light"
@@ -117,9 +117,6 @@ export function SignUpSide() {
                 alignItems: "center",
               }}
             >
-              <div className="dev1">
-                <h3 className="dev5">SIGN UP FOR SALE UPDATES</h3>
-              </div>
               <div className="dev2">
                 <h5 className="dev6">
                   Get ideas, inspirations & offers in your inbox
@@ -172,7 +169,7 @@ export function SignUpSide() {
                     <Link href="#" variant="body2"></Link>
                   </Grid>
                   <Grid item>
-                    <Link href="http://localhost:3000/signin" variant="body2">
+                    <Link href="https://e-commerce-project-iota.vercel.app/login" variant="body2">
                       {"Already have an account? Sign in"}
                     </Link>
                   </Grid>

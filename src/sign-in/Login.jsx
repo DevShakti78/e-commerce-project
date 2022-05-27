@@ -35,7 +35,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Urbanladder
+       YoungerChoice
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -78,7 +78,7 @@ export function SignInSide() {
   return (
     <div className='devcont'>
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '50vh' }}>
+      <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid
           item
@@ -86,7 +86,7 @@ export function SignInSide() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://www.ulcdn.net/media/subscription_popup/Colour-Crush-Sale-End-Pop-up.jpg?1648194184)',
+            backgroundImage: 'url(https://img.freepik.com/free-photo/woman-black-trousers-purple-blouse-laughs-leaning-stand-with-elegant-clothes-pink-background_197531-17614.jpg?w=2000)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -105,7 +105,6 @@ export function SignInSide() {
             }}
           >
 
-<div className='dev1'><h3 className='dev5'>SIGN UP FOR SALE UPDATES</h3></div>
             <div className='dev2'><h5 className='dev6'>Login to explore great designs</h5></div>
             <div className='dev3'><h4 className='dev7'>LOGIN WITH YOUR EMAIL ID</h4></div>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
@@ -143,12 +142,12 @@ export function SignInSide() {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="http://localhost:3000/forgotpass" variant="body2">
+                  <Link href="https://e-commerce-project-iota.vercel.app/forgotpass" variant="body2">
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="http://localhost:3000/signup" variant="body2">
+                  <Link href="https://e-commerce-project-iota.vercel.app/signup" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                   

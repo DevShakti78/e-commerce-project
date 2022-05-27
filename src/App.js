@@ -19,10 +19,14 @@ import Mainhome from './Components/Mainhome';
 import {SignUpSide} from './sign-up/SignUp'
 import Siderbar from './Components/Siderbar';
 import TestProd from './Components/TestProd';
+import Forgotpass from './sign-in/Forgotpass'
+
 function App() {
   return (
     <>
+
     <TestProd/>
+   
        <Pricing/>
     <div className='flexprop'>
     <div className='box1'>
@@ -48,6 +52,7 @@ function App() {
           <Route path="/payment" element={<PaymentForm/>} />
           <Route path="/login" element={<SignInSide/>} />
           <Route path="/signup" element={<SignUpSide/>} />
+          <Route path="/forgotpass" element={<Forgotpass/>} />
        
       </Routes>
     </BrowserRouter>
