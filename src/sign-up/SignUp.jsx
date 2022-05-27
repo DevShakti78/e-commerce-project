@@ -60,7 +60,7 @@ export function SignUpSide() {
         // Signed in
         const user = userCredential.user;
         alert("user created succesfully");
-        navigate("/signin")
+        navigate("/login")
 
         // ...
       })
