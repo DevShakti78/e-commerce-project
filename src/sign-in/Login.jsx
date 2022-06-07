@@ -17,6 +17,10 @@ import { Googleauth } from './Googleauth';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import {useNavigate} from "react-router-dom"
+import { useDispatch } from 'react-redux';
+import {userLogin} from '../Redux/Action'
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyA0LeUN82utX9Ex2JsqxL3PYNsDmWxn-4o",
   authDomain: "auth-development-bf151.firebaseapp.com",
@@ -46,6 +50,7 @@ function Copyright(props) {
 const theme = createTheme();
 const auth = getAuth();
 export function SignInSide() {
+  const dispatch = useDispatch()
   const navigate = useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -59,7 +64,8 @@ export function SignInSide() {
     const user = userCredential.user;
     alert('user succesfully signed in')
     // console.log(userCredential)
-   localStorage.setItem("token",JSON.stringify(userCredential))
+   localStorage.setItem("token",userCredential.user.uid)
+   dispatch(userLogin(userCredential.user.uid))
    navigate("/")
 
     // ...

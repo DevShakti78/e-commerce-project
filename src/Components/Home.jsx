@@ -28,6 +28,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import {useState} from 'react'
 import AutoplayExample from './Homeslideshow'
 import {useNavigate} from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -113,8 +114,19 @@ const footers = [
 
 function PricingContent() {
  
+  const [token1,setToken1] = useState("")
+
+  var token = localStorage.getItem('token')
+
+// React.useEffect(()=>{
+//   setToken1(tokens.user?.uid || "null")
+// },[])
+
   
+
+console.log(token1)
   const [itemCount, setItemCount] = React.useState(1);
+  const state = useSelector((e)=>e.login.token)
   return (
     <React.Fragment>
      
@@ -140,23 +152,29 @@ function PricingContent() {
             />
           </Search>
           <nav>
-         
-            <Link
+         {
+           state ? <Link
+           variant="button"
+           color="text.primary"
+           href="https://e-commerce-project-iota.vercel.app/product"
+           sx={{ my: 1, mx: 1.5 }}
+         >
+           Features
+         </Link> : null
+         }
+            
+            {
+             state ? <Link
               variant="button"
               color="text.primary"
               href="https://e-commerce-project-iota.vercel.app/product"
               sx={{ my: 1, mx: 1.5 }}
-            >
-              Features
-            </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="https://e-commerce-project-iota.vercel.app/product"
-              sx={{ my: 1, mx: 1.5 }}
+              
             >
               New Arrived
-            </Link>
+            </Link> : null
+            }
+            
             <Link
               variant="button"
               color="text.primary"
@@ -168,6 +186,9 @@ function PricingContent() {
           </nav>
           <Button onClick={()=>console.log("here")} href="https://e-commerce-project-iota.vercel.app/login" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
+          </Button>
+          <Button onClick={()=>localStorage.setItem("token","")}>
+            Logout
           </Button>
           <Link
               href="https://e-commerce-project-iota.vercel.app/cart"

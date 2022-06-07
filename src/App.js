@@ -22,6 +22,8 @@ import TestProd from './Components/TestProd';
 import Forgotpass from './sign-in/Forgotpass'
 import PrivateRoute from 'private-route-react';
 import { useState,useEffect } from 'react';
+import Authentic from './Components/Authentic';
+
 
 
 
@@ -92,7 +94,7 @@ function App() {
           <Route element={<PrivateWrapper auth={{ isAuthenticated: {isAuthenticated} }} />}>
             <Route path="/cart" element={<Cart/>} />
           </Route> */}
-      <Route path="/" element={<Mainhome/>} />
+      <Route path="/" element={<Authentic/>} />
           <Route path="/product" element={<Cartitems/>} />
           <Route path="/cart" element={<Cart/>} />
           <Route path="/address" element={<AddressForm/>} />

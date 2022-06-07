@@ -1,18 +1,20 @@
 import React, {useState} from 'react'
 import Mainhome from './Mainhome';
 import { SignInSide } from '../sign-in/Login'
-const Authentic = () => {
-    const [token1,setToken1] = useState("")
- 
-  var token = localStorage.getItem('token')
-var tokens = JSON.parse(token)
-  setToken1(tokens.user.uid)
+import { useSelector } from 'react-redux';
 
-console.log(token1)
+
+const Authentic = () => {
+    // const [state,setToken1] = useState("")
+ const state = useSelector((e)=>e.login.token)
+ console.log(state,"token")
+
+
+
   return (
       <>
     {
-        token1 ? <Mainhome/> : <SignInSide/> 
+        state ? <Mainhome/> : <SignInSide/> 
     }
     </>
   )

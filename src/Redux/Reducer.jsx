@@ -1,5 +1,8 @@
+
+import { USER_LOGIN } from "./Action";
 const initialState = {
-    product:[]
+    product:[],
+    token:""
 }
 export const reducer = (state=initialState,{type,payload})=>{
 
@@ -11,4 +14,20 @@ export const reducer = (state=initialState,{type,payload})=>{
             }
             default:return state
     }
+}
+
+
+
+export const LogInReducer = (store = initialState, { type, payload }) => {
+    switch (type) {
+        case USER_LOGIN:
+            return {
+                ...store,
+                token: payload,
+                
+            }
+        default:
+            return store;
+    }
+
 }

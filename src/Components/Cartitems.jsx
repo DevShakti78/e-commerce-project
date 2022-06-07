@@ -8,7 +8,8 @@ import Select from '@mui/material/Select';
 import { useSelector } from 'react-redux';
 
 const Cartitems = () => {
-  const item = useSelector((e)=>(e.product))
+  const item = useSelector((e)=>(e.reducer.product))
+  console.log(item)
   return (
     <>
 <div className='justify-content-center'>
@@ -18,6 +19,7 @@ const Cartitems = () => {
 <div className='row justify-content-center'>
 {
 item.map((item,index)=>{
+
 return(
 <Itemcard img={item.img} title={item.title} desc={item.desc} price={item.price} item={item} key={index} />
 )
