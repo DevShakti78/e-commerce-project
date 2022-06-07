@@ -12,8 +12,19 @@ import Stack from '@mui/material/Stack';
 
 
 export default function AddressForm() {
+  const total = localStorage.getItem("react-use-cart")
+ const total_price = JSON.parse(total)
+  const paytotal = total_price.cartTotal
+  const totalitems = total_price.totalItems
+ console.log(total_price.cartTotal)
   return (
+    <>
+    <div><h3 style={{color:"red"}}>You need to pay {paytotal} for total of {totalitems} items</h3>
+    <br />
+    <h3>Add address To Start Paying</h3>
+    </div>
     <div className="card" style={{width:"500px", marginLeft:'400px',marginTop:"25px"}}>
+    
     <div className="card-body">
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -118,5 +129,6 @@ export default function AddressForm() {
     </React.Fragment>
     </div>
 </div>
+</>
   );
 }

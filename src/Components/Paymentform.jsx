@@ -11,8 +11,22 @@ import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 
 export default function PaymentForm() {
+
+  const total = localStorage.getItem("react-use-cart")
+  const total_price = JSON.parse(total)
+   const paytotal = total_price.cartTotal
+   const totalitems = total_price.totalItems
+  console.log(total_price.cartTotal)
   return (
-    <div className="card" style={{width:"500px", marginLeft:'400px',marginTop:"25px"}}>
+    
+  <>
+  <div>
+      <h3>Total Payable Amount: {paytotal}</h3>
+      <h4>To Paynow Enter Card Details</h4>
+      <img style={{width:"60%"}} src="https://store-cdn.arduino.cc/uni/wysiwyg/Payment_Options.jpg" alt="" />
+      </div>
+    <div className="card" style={{width:"500px", marginLeft:'100px',marginTop:"25px"}}>
+      
     <div className="card-body">
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -68,10 +82,11 @@ export default function PaymentForm() {
         </Grid>
       </Grid>
       <Button href='https://e-commerce-project-iota.vercel.app' onClick={()=> {alert("payment succes")}} variant="contained" endIcon={<SendIcon />}>
-       
+       Pay Now
       </Button>
     </React.Fragment>
     </div>
 </div>
+</>
   );
 }
