@@ -25,13 +25,12 @@ import { useState,useEffect } from 'react';
 
 
 
-const PrivateWrapper = ({ auth: { isAuthenticated } }) => {
-  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
-};
+// const PrivateWrapper = ({ auth: { isAuthenticated } }) => {
+//   return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+// };
 
-var token = localStorage.getItem('token')
-var token1 = JSON.parse(token)
-console.log(token1)
+
+
 
 // if(token1._tokenResponse.idToken==null){
 //    finalToken = "s"
@@ -43,19 +42,20 @@ console.log(token1)
 
 // console.log(token1._tokenResponse.idToken)
 function App() {
+  
 
- const [isAuthenticated,setisAuthenticated] = useState(false)
-  useEffect(()=>{
- if(token1==null){
-  setisAuthenticated(false)
-    console.log("false")
-  }
-  else{
-    setisAuthenticated(true)
-    console.log("true")
-  }
 
-  },[])
+//  const [isAuthenticated,setisAuthenticated] = useState(false)
+//   useEffect(()=>{
+//  if(token1==null){
+//   setisAuthenticated(false)
+//     console.log("false")
+//   }
+//   else{
+//     setisAuthenticated(true)
+//     console.log("true")
+//   }
+//   },[])
 
   // if(finaltoken){
   //   setCurrentUser(true)
@@ -86,15 +86,15 @@ function App() {
 <ButtonBases/> */}
 <BrowserRouter>
       <Routes>
-      <Route element={<PrivateWrapper auth={{ isAuthenticated:isAuthenticated}} />}>
+      {/* <Route element={<PrivateWrapper auth={{ isAuthenticated:isAuthenticated}} />}>
             <Route path="/product" element={<Cartitems/>} />
           </Route>
           <Route element={<PrivateWrapper auth={{ isAuthenticated: {isAuthenticated} }} />}>
             <Route path="/cart" element={<Cart/>} />
-          </Route>
+          </Route> */}
       <Route path="/" element={<Mainhome/>} />
-          {/* <Route path="/product" element={<Cartitems/>} /> */}
-         
+          <Route path="/product" element={<Cartitems/>} />
+          <Route path="/cart" element={<Cart/>} />
           <Route path="/address" element={<AddressForm/>} />
           <Route path="/payment" element={<PaymentForm/>} />
           <Route path="/login" element={<SignInSide/>} />
