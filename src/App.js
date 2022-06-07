@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link,Navigate,Outlet} from "react-router-dom";
 import  Pricing  from './Components/Home';
 import Album from './Components/Product';
 import { Footer } from './Components/Footer';
@@ -20,9 +20,51 @@ import {SignUpSide} from './sign-up/SignUp'
 import Siderbar from './Components/Siderbar';
 import TestProd from './Components/TestProd';
 import Forgotpass from './sign-in/Forgotpass'
+import PrivateRoute from 'private-route-react';
+import { useState,useEffect } from 'react';
 
+
+
+const PrivateWrapper = ({ auth: { isAuthenticated } }) => {
+  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+};
+
+var token = localStorage.getItem('token')
+var token1 = JSON.parse(token)
+console.log(token1)
+
+// if(token1._tokenResponse.idToken==null){
+//    finalToken = "s"
+// }
+// else{
+//    finalToken = token1._tokenResponse.idToken
+// }
+
+
+// console.log(token1._tokenResponse.idToken)
 function App() {
+
+ const [isAuthenticated,setisAuthenticated] = useState(false)
+  useEffect(()=>{
+ if(token1==null){
+  setisAuthenticated(false)
+    console.log("false")
+  }
+  else{
+    setisAuthenticated(true)
+    console.log("true")
+  }
+
+  },[])
+
+  // if(finaltoken){
+  //   setCurrentUser(true)
+  // }
+  // else{
+  //   setCurrentUser(false)
+  // }
   return (
+   
     <>
 
     <TestProd/>
@@ -37,17 +79,22 @@ function App() {
  
       <CartProvider>
 
-     
+    
     
 
 {/* <AutoplayExample/>
 <ButtonBases/> */}
-
 <BrowserRouter>
       <Routes>
+      <Route element={<PrivateWrapper auth={{ isAuthenticated:isAuthenticated}} />}>
+            <Route path="/product" element={<Cartitems/>} />
+          </Route>
+          <Route element={<PrivateWrapper auth={{ isAuthenticated: isAuthenticated }} />}>
+            <Route path="/cart" element={<Cart/>} />
+          </Route>
       <Route path="/" element={<Mainhome/>} />
-          <Route path="/product" element={<Cartitems/>} />
-          <Route path="/cart" element={<Cart/>} />
+          {/* <Route path="/product" element={<Cartitems/>} /> */}
+         
           <Route path="/address" element={<AddressForm/>} />
           <Route path="/payment" element={<PaymentForm/>} />
           <Route path="/login" element={<SignInSide/>} />

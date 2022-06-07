@@ -58,7 +58,7 @@ export function SignInSide() {
     
     const user = userCredential.user;
     alert('user succesfully signed in')
-    console.log(userCredential)
+    // console.log(userCredential)
    localStorage.setItem("token",JSON.stringify(userCredential))
    navigate("/")
 
