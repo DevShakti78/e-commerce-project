@@ -86,10 +86,10 @@ function App() {
 <ButtonBases/> */}
 <BrowserRouter>
       <Routes>
-      <Route element={<PrivateWrapper auth={{ isAuthenticated:isAuthenticated}} />}>
+      <Route element={<PrivateWrapper auth={{ isAuthenticated:{isAuthenticated}}} />}>
             <Route path="/product" element={<Cartitems/>} />
           </Route>
-          <Route element={<PrivateWrapper auth={{ isAuthenticated: isAuthenticated }} />}>
+          <Route element={<PrivateWrapper auth={{ isAuthenticated: {isAuthenticated} }} />}>
             <Route path="/cart" element={<Cart/>} />
           </Route>
       <Route path="/" element={<Mainhome/>} />
