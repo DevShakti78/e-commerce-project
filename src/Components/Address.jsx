@@ -1,14 +1,12 @@
 import * as React from 'react';
+import {useState} from 'react'
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import { width } from '@mui/system';
 import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
-import Stack from '@mui/material/Stack';
 
 
 export default function AddressForm() {
@@ -17,13 +15,22 @@ export default function AddressForm() {
   const paytotal = total_price.cartTotal
   const totalitems = total_price.totalItems
  console.log(total_price.cartTotal)
+ const [name,setName] = useState("");
+ const [address,setAddres] = useState("");
+ const [pincode,setPincode] = useState("");
+ const [state,setState] = useState("")
+ console.log(name,address,pincode,state)
+ const saveUser=()=>{
+  localStorage.setItem("userDetail",JSON.stringify({name,address,pincode,state}))
+ }
+ 
   return (
     <>
     <div><h3 style={{color:"red"}}>You need to pay {paytotal} for total of {totalitems} items</h3>
     <br />
     <h3>Add address To Start Paying</h3>
     </div>
-    <div className="card" style={{width:"500px", marginLeft:'400px',marginTop:"25px"}}>
+    <div className="card" style={{width:"500px", marginLeft:'100px',marginTop:"25px"}}>
     
     <div className="card-body">
     <React.Fragment>
@@ -40,6 +47,9 @@ export default function AddressForm() {
             fullWidth
             autoComplete="given-name"
             variant="standard"
+            onChange={(e)=>{
+setName(e.target.value)
+            }}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -51,6 +61,7 @@ export default function AddressForm() {
             fullWidth
             autoComplete="family-name"
             variant="standard"
+            
           />
         </Grid>
         <Grid item xs={12}>
@@ -62,6 +73,9 @@ export default function AddressForm() {
             fullWidth
             autoComplete="shipping address-line1"
             variant="standard"
+            onChange={(e)=>{
+              setAddres(e.target.value)
+                          }}
           />
         </Grid>
         <Grid item xs={12}>
@@ -92,6 +106,9 @@ export default function AddressForm() {
             label="State/Province/Region"
             fullWidth
             variant="standard"
+            onChange={(e)=>{
+              setState(e.target.value)
+                          }}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -103,6 +120,9 @@ export default function AddressForm() {
             fullWidth
             autoComplete="shipping postal-code"
             variant="standard"
+            onChange={(e)=>{
+              setPincode(e.target.value)
+                          }}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -123,7 +143,7 @@ export default function AddressForm() {
           />
         </Grid>
       </Grid>
-      <Button href='https://e-commerce-project-iota.vercel.app/payment' variant="contained" endIcon={<SendIcon />}>
+      <Button onClick={saveUser} href='https://e-commerce-project-iota.vercel.app/payment' variant="contained" endIcon={<SendIcon />}>
         Next
       </Button>
     </React.Fragment>
