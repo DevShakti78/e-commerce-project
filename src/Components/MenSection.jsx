@@ -9,6 +9,7 @@ const MenSection = () => {
 const [men,setMen] = useState(null);
 
     const dispatch = useDispatch();
+    
   useEffect(()=>{
    
       axios
