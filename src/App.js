@@ -23,13 +23,16 @@ import Forgotpass from './sign-in/Forgotpass'
 import PrivateRoute from 'private-route-react';
 import { useState,useEffect } from 'react';
 import Authentic from './Components/Authentic';
+import MenSection from './Components/MenSection';
+import WomenSection from './Components/WomenSection';
+import KidsSection from './Components/KidsSection';
+import { useSelector } from 'react-redux';
 
 
 
-
-// const PrivateWrapper = ({ auth: { isAuthenticated } }) => {
-//   return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
-// };
+const PrivateWrapper = ({ auth: { isAuthenticated } }) => {
+  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+};
 
 
 
@@ -46,25 +49,19 @@ import Authentic from './Components/Authentic';
 function App() {
   
 
+  const state = useSelector((e)=>e.login.token)
+ const [isAuthenticated,setisAuthenticated] = useState(false)
+  useEffect(()=>{
+ if(state){
+  setisAuthenticated(true)
+    console.log("true")
+  }
+  else{
+    setisAuthenticated(false)
+    console.log("false")
+  }
+  },[])
 
-//  const [isAuthenticated,setisAuthenticated] = useState(false)
-//   useEffect(()=>{
-//  if(token1==null){
-//   setisAuthenticated(false)
-//     console.log("false")
-//   }
-//   else{
-//     setisAuthenticated(true)
-//     console.log("true")
-//   }
-//   },[])
-
-  // if(finaltoken){
-  //   setCurrentUser(true)
-  // }
-  // else{
-  //   setCurrentUser(false)
-  // }
   return (
    
     <>
@@ -86,25 +83,29 @@ function App() {
 
 {/* <AutoplayExample/>
 <ButtonBases/> */}
-<BrowserRouter>
+
       <Routes>
-      {/* <Route element={<PrivateWrapper auth={{ isAuthenticated:isAuthenticated}} />}>
+      <Route element={<PrivateWrapper auth={{ isAuthenticated:{isAuthenticated}}} />}>
             <Route path="/product" element={<Cartitems/>} />
           </Route>
           <Route element={<PrivateWrapper auth={{ isAuthenticated: {isAuthenticated} }} />}>
             <Route path="/cart" element={<Cart/>} />
-          </Route> */}
+          </Route>
       <Route path="/" element={<Authentic/>} />
-          <Route path="/product" element={<Cartitems/>} />
-          <Route path="/cart" element={<Cart/>} />
+          {/* <Route path="/product" element={<Cartitems/>} />
+          <Route path="/cart" element={<Cart/>} /> */}
           <Route path="/address" element={<AddressForm/>} />
           <Route path="/payment" element={<PaymentForm/>} />
           <Route path="/login" element={<SignInSide/>} />
           <Route path="/signup" element={<SignUpSide/>} />
           <Route path="/forgotpass" element={<Forgotpass/>} />
+          <Route path="/product/men" element={<MenSection/>} />
+          <Route path="/product/women" element={<WomenSection/>} />
+          <Route path="/product/kids" element={<KidsSection/>} />
+
        
       </Routes>
-    </BrowserRouter>
+    
    
  
     </CartProvider>

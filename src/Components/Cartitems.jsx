@@ -24,9 +24,6 @@ return(
 <Itemcard img={item.img} title={item.title} desc={item.desc} price={item.price} item={item} key={index} />
 )
 })}
-
-
-
 </div>
 
 </section>

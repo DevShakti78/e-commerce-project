@@ -152,19 +152,19 @@ console.log(token1)
             />
           </Search>
           <nav>
-         {
-           state ? <Link
+         
+          <Link
            variant="button"
            color="text.primary"
            href="https://e-commerce-project-iota.vercel.app/product"
            sx={{ my: 1, mx: 1.5 }}
          >
            Features
-         </Link> : null
-         }
+         </Link>
+         
             
-            {
-             state ? <Link
+            
+             <Link
               variant="button"
               color="text.primary"
               href="https://e-commerce-project-iota.vercel.app/product"
@@ -172,8 +172,8 @@ console.log(token1)
               
             >
               New Arrived
-            </Link> : null
-            }
+            </Link>
+            
             
             <Link
               variant="button"

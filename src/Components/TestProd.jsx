@@ -9,7 +9,7 @@ const TestProd = () => {
     const item = useSelector((e)=>e)
     useEffect(() => {
       
-       axios.get("https://fashionltd.herokuapp.com/productData").then(({data})=>{
+       axios.get("https://fashionlfash.herokuapp.com/products").then(({data})=>{
          //console.log(data)
          dispatch(ProdData(data))
        })
