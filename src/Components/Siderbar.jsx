@@ -43,9 +43,9 @@ const Siderbar = () => {
   <Menu iconShape="square">
     <MenuItem>Dashboard</MenuItem>
     <SubMenu title="Catogeries">
-<Button href='http://localhost:3000/product/men'>Men</Button>
-<Button href='http://localhost:3000/product/women'>Women</Button>
-<Button href='http://localhost:3000/product/kids'>Kids</Button>
+<Button href='https://e-commerce-project-iota.vercel.app/product/men'>Men</Button>
+<Button href='https://e-commerce-project-iota.vercel.app/product/women'>Women</Button>
+<Button href='https://e-commerce-project-iota.vercel.app/product/kids'>Kids</Button>
     </SubMenu>
     <SubMenu title="Sort By Price">
       <MenuItem onClick={() => handleSorted("desc")}>High To Low</MenuItem>
