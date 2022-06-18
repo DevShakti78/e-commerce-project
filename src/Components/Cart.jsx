@@ -67,7 +67,7 @@ Navigate("/address")
                         <div className="checkout">
                                 <div className="subtotal-div">
                                     <p className="subtotal">SUBTOTAL</p>
-                                    <p className="subtotal-price">$ {sum.toFixed(2)}</p>
+                                    <p className="subtotal-price">Rs:-{sum.toFixed(2)}</p>
                                 </div>
                                 <button className="checkout-btn" onClick={checkout}>CHECKOUT</button>
                         </div>

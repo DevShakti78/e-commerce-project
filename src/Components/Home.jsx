@@ -193,7 +193,7 @@ console.log(token1)
           <Link
               variant="button"
               color="text.primary"
-              href="http://localhost:3000/product"
+              href="https://e-commerce-project-iota.vercel.app/product"
               sx={{ my: 1, mx: 1.5 }}
             >
               <AddShoppingCartIcon/>
