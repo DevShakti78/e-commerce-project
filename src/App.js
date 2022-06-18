@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Link,Navigate,Outlet} from "react-router-
 import  Pricing  from './Components/Home';
 import { Footer } from './Components/Footer';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import Cart from './Components/Cart'
+import Cart from "./Components/Cart"
 import {CartProvider} from 'react-use-cart'
 import AddressForm from './Components/Address'
 import PaymentForm from './Components/Paymentform'

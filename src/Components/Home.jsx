@@ -190,7 +190,14 @@ console.log(token1)
           <Button onClick={()=>localStorage.setItem("token","")}>
             
           </Button>
-          
+          <Link
+              variant="button"
+              color="text.primary"
+              href="http://localhost:3000/product"
+              sx={{ my: 1, mx: 1.5 }}
+            >
+              <AddShoppingCartIcon/>
+            </Link>
         </Toolbar>
       </AppBar>
       {/* Hero unit */}
