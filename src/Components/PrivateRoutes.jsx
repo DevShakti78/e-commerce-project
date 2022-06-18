@@ -1,17 +1,14 @@
-import React, {useContext} from 'react'
-import {Route,Navigate,Outlet} from 'react-router-dom'
-import { AuthContext } from '../Components/Auth'
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import React from 'react'
+import { Outlet, Navigate } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 const PrivateRoutes = () => {
-    const loggedIn  = true;
-
-  return loggedIn ? <Outlet/> : <Navigate to="/login" />
-    
-    
-
-    
-  
+    const state = useSelector((e)=>e.login.token)
+     
+  return (
+    state ? <Outlet/> : <Navigate to = "/login"/>
+  )
 }
 
 export default PrivateRoutes

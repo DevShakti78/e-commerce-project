@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link,Navigate,Outlet} from "react-router-dom";
 import  Pricing  from './Components/Home';
 import { Footer } from './Components/Footer';
@@ -17,28 +16,14 @@ import Forgotpass from './sign-in/Forgotpass'
 import { useState,useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Appclone from './Components/Appclone'
+import PrivateRoutes from './Components/PrivateRoutes';
 
 
-const PrivateWrapper = ({ auth: { isAuthenticated } }) => {
-  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
-};
 
 function App() {
   
 
   const state = useSelector((e)=>e.login.token)
- const [isAuthenticated,setisAuthenticated] = useState(false)
-  useEffect(()=>{
- if(state){
-  setisAuthenticated(true)
-    console.log("true")
-  }
-  else{
-    setisAuthenticated(false)
-    console.log("false")
-  }
-  },[])
-
   return (
    
     <>
@@ -57,16 +42,14 @@ function App() {
 
 
       <Routes>
-      <Route element={<PrivateWrapper auth={{ isAuthenticated:{isAuthenticated}}} />}>
-            <Route path="/product" element={<Appclone/>} />
-          </Route>
-          <Route element={<PrivateWrapper auth={{ isAuthenticated: {isAuthenticated} }} />}>
+<Route element={<PrivateRoutes/>}>
+<Route path="/address" element={<AddressForm/>} exact />
+</Route>
+
             <Route path="/cart" element={<Cart/>} />
-          </Route>
-          {/* <Route path="/product" element={<Cartitems/>} />
-          <Route path="/cart" element={<Cart/>} /> */}
-          <Route path="/" element={<Mainhome/>} />
-          <Route path="/address" element={<AddressForm/>} />
+          <Route path="/product" element={<Appclone/>} />
+          <Route path="/" element={<Mainhome/>} exact />
+         
           <Route path="/payment" element={<PaymentForm/>} />
           <Route path="/login" element={<SignInSide/>} />
           <Route path="/signup" element={<SignUpSide/>} />
