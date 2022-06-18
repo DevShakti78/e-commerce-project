@@ -66,7 +66,7 @@ export function SignInSide() {
     // console.log(userCredential)
    localStorage.setItem("token",userCredential.user.uid)
    dispatch(userLogin(userCredential.user.uid))
-   navigate("/")
+   navigate("/address")
 
     // ...
   })
