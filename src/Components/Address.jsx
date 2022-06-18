@@ -11,6 +11,7 @@ import SendIcon from '@mui/icons-material/Send';
 
 export default function AddressForm() {
   const total = localStorage.getItem("react-use-cart")
+  const sum = localStorage.getItem("sum")
  const total_price = JSON.parse(total)
   const paytotal = total_price.cartTotal
   const totalitems = total_price.totalItems
@@ -26,7 +27,7 @@ export default function AddressForm() {
  
   return (
     <>
-    <div><h3 style={{color:"red"}}>You need to pay {paytotal} for total of {totalitems} items</h3>
+    <div><h3 style={{color:"red"}}>You need to pay {sum} To By items in your carts</h3>
     <br />
     <h3>Add address To Start Paying</h3>
     </div>

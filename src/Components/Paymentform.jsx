@@ -13,6 +13,7 @@ import Stack from '@mui/material/Stack';
 export default function PaymentForm() {
 
   const total = localStorage.getItem("react-use-cart")
+  const sum = localStorage.getItem("sum")
   const total_price = JSON.parse(total)
    const paytotal = total_price.cartTotal
    const totalitems = total_price.totalItems
@@ -30,7 +31,7 @@ export default function PaymentForm() {
       <h4>Pincode: {userDetail.pincode} State: {userDetail.state}</h4>
       <hr />
     </div>
-      <h3>Total Payable Amount: {paytotal}</h3>
+      <h3>Total Payable Amount: {sum}</h3>
       <h4>To Paynow Enter Card Details</h4>
       <hr />
       <img style={{width:"60%"}} src="https://store-cdn.arduino.cc/uni/wysiwyg/Payment_Options.jpg" alt="" />

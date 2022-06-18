@@ -23,7 +23,8 @@ const Navigate = useNavigate();
 
     const checkout = () => {
 Navigate("/address")
-        alert(`Checkout - Subtotal: $ ${sum.toFixed(2)}`)
+        alert(`Checkout - Subtotal: Rs: ${sum.toFixed(2)}`)
+        localStorage.setItem("sum",sum)
     }
 
     return (
