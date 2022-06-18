@@ -188,20 +188,9 @@ console.log(token1)
             Login
           </Button>
           <Button onClick={()=>localStorage.setItem("token","")}>
-            Logout
+            
           </Button>
-          <Link
-              href="https://e-commerce-project-iota.vercel.app/cart"
-            >
-              <IconButton color="primary" aria-label="add to shopping cart">
-              <Badge color="secondary" badgeContent={itemCount}>
-              <AddShoppingCartIcon />{" "}
-        </Badge>
-  
-</IconButton>
-            </Link>
-         
-<Avatar alt="Cindy Baker" src="https://i.pinimg.com/564x/d1/dc/97/d1dc979c4664242c74b144a9b115de9c.jpg" />
+          
         </Toolbar>
       </AppBar>
       {/* Hero unit */}
