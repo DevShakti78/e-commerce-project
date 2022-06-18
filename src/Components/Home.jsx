@@ -139,9 +139,17 @@ console.log(token1)
         sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
+          <Link
+            variant="button"
+            color="text.primary"
+            href="https://e-commerce-project-iota.vercel.app"
+            sx={{ my: 1, mx: 1.5 }}
+          >
           <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+          
             Younger Choice ltd
           </Typography>
+          </Link>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
