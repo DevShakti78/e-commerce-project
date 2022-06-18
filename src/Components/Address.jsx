@@ -27,7 +27,7 @@ export default function AddressForm() {
  
   return (
     <>
-    <div><h3 style={{color:"red"}}>You need to pay {sum} To By items in your carts</h3>
+    <div><h3 style={{color:"red"}}>You need to pay {sum} To Buy items in your carts</h3>
     <br />
     <h3>Add address To Start Paying</h3>
     </div>
