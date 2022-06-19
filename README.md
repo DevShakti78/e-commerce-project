@@ -17,13 +17,13 @@ We can sign in login,signup,add products to cart,buy clothes item as well.
 * Product Page
 
 <p align="center">
-  <img src="https://miro.medium.com/max/2732/1*GAJuVcyq157-8Z7phglnNw.png" title="Landing">
+  <img src="https://miro.medium.com/max/1366/1*eWeqFWJwpoK5qzqBO-y1SQ.png" title="Landing">
 </p>
 
 * Cart Page
 
 <p align="center">
-  <img src="https://miro.medium.com/max/2732/1*x9XP1HmSwi1DgPOTNkMJyg.png" title="Landing">
+  <img src="https://miro.medium.com/max/1366/1*g887C5KMqNTcCDiK9d_aAQ.png" title="Landing">
 </p>
 
 * Adress Page
